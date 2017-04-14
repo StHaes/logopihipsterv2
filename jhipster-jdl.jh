@@ -1,0 +1,25 @@
+entity Thing {
+	name String,
+    logoId String,
+    currentState Boolean,
+    desiredState Boolean
+}
+
+entity ThingInState {
+	state Boolean
+}
+
+entity Mode {
+	code String,
+	label String,
+}
+
+relationship OneToMany {
+	Mode{ThingInState} to ThingInState{mode}
+}
+
+relationship ManyToOne {
+	ThingInState{Thing} to Thing
+}
+
+service all with serviceImpl 

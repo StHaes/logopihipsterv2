@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "thingInState",
+            "otherEntityName": "thingInState",
+            "otherEntityRelationshipName": "mode"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170414084719",
+    "entityTableName": "mode",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

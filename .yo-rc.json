@@ -1,0 +1,32 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.colardynit.logopihipsterv2"
+        },
+        "jhipsterVersion": "4.1.1",
+        "baseName": "logopihipsterv2",
+        "packageName": "com.colardynit.logopihipsterv2",
+        "packageFolder": "com/colardynit/logopihipsterv2",
+        "serverPort": "8080",
+        "authenticationType": "session",
+        "hibernateCache": "no",
+        "clusteredHttpSession": false,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mariadb",
+        "prodDatabaseType": "mariadb",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSocialSignIn": false,
+        "rememberMeKey": "15267a4b79e615c725c338543bd8a0a673805f57",
+        "clientFramework": "angular2",
+        "useSass": false,
+        "clientPackageManager": "yarn",
+        "applicationType": "monolith",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "enableTranslation": false
+    }
+}

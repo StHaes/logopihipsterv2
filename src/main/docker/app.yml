@@ -1,0 +1,14 @@
+version: '2'
+services:
+    logopihipsterv2-app:
+        image: logopihipsterv2
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mariadb://logopihipsterv2-mariadb:3306/logopihipsterv2
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    logopihipsterv2-mariadb:
+        extends:
+            file: mariadb.yml
+            service: logopihipsterv2-mariadb

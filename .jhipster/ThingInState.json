@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "thing",
+            "otherEntityName": "thing",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "mode",
+            "otherEntityName": "mode",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "state",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170414084719",
+    "entityTableName": "thing_in_state",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

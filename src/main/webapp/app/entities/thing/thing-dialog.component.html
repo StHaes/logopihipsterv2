@@ -1,0 +1,49 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myThingLabel">Create or edit a Thing</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!thing.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="thing.id" readonly/>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                   [(ngModel)]="thing.name"
+            />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_logoId">Logo Id</label>
+            <input type="text" class="form-control" name="logoId" id="field_logoId"
+                   [(ngModel)]="thing.logoId"
+            />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_currentState">Current State</label>
+            <input type="checkbox" class="form-control" name="currentState" id="field_currentState"
+                   [(ngModel)]="thing.currentState"
+            />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_desiredState">Desired State</label>
+            <input type="checkbox" class="form-control" name="desiredState" id="field_desiredState"
+                   [(ngModel)]="thing.desiredState"
+            />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

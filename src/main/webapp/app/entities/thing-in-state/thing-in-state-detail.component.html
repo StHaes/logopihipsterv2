@@ -1,0 +1,36 @@
+<div *ngIf="thingInState">
+    <h2><span>Thing In State</span> {{thingInState.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{thingInState.state}}</span>
+        </dd>
+        <dt><span>Thing</span></dt>
+        <dd>
+            <div *ngIf="thingInState.thing">
+                <a [routerLink]="['/thing', thingInState.thing?.id]">{{thingInState.thing?.id}}</a>
+            </div>
+        </dd>
+        <dt><span>Mode</span></dt>
+        <dd>
+            <div *ngIf="thingInState.mode">
+                <a [routerLink]="['/mode', thingInState.mode?.id]">{{thingInState.mode?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'thing-in-state/'+ thingInState.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
